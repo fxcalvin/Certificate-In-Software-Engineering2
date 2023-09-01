@@ -1,0 +1,47 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='/registrationform.css')
+  title GENO KYC FORM
+.container
+  .form-heading
+    h1 GENQ KYC FORM
+  form#genqForm(name='registration' action='/api/registrationform' onsubmit='return validate(event);' method='POST')
+    h2 Biodata
+    hr
+    .form-group.name-group
+      input#firstname(type='text' name='firstname' placeholder='First Name')
+      span#firstname-error
+      input#lastname(type='text' name='lastname' placeholder='Last Name')
+      span#lastname-error
+    .form-group.name-group
+      input#date(type='text' name='date' placeholder='Date of Birth(DD/MM/YY)')
+      span#date-error
+      input#gender(type='text' name='gender' placeholder='Gender')
+      span#gender-error
+    h2 Location
+    hr
+    .form-group.name-group
+      input#country(type='text' name='country' placeholder='Country')
+      span#country-error
+      input#district(type='text' name='district' placeholder='District')
+      span#district-error
+    .form-group.name-group
+      input#town(type='text' name='town' placeholder='Town')
+      span#town-error
+      input#zip(type='text' name='zipcode' placeholder='Zip code')
+      span#zip-error
+    h2 Contact and Address
+    hr
+    .form-group.name-group
+      input#phone1(type='text' name='phone1' placeholder='Phone Number 1')
+      span#phone1-error
+      input#phone2(type='text' name='phone2' placeholder='Phone Number 2')
+      span#phone2-error
+    .form-group
+      input#email(type='email' name='email' placeholder='Email')
+      span#email-error
+    .form-group.name-group
+      button(type='submit') Submit
+script(src='/validation.js')
